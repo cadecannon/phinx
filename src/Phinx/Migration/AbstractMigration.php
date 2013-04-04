@@ -55,6 +55,11 @@ abstract class AbstractMigration implements MigrationInterface
     protected $adapter;
     
     /**
+     * @var string
+     */
+    protected $environmentName;
+    
+    /**
      * Class Constructor.
      *
      * @param int $version Migration Version
@@ -104,6 +109,22 @@ abstract class AbstractMigration implements MigrationInterface
     public function getAdapter()
     {
         return $this->adapter;
+    }
+    
+    /**
+     * {@inheritdoc}
+     */
+    public function setEnvironmentName($name)
+    {
+        $this->environmentName = $name;
+    }
+    
+    /**
+     * {@inheritdoc}
+     */
+    public function getEnvironmentName()
+    {
+        return $this->environmentName;
     }
 
     /**

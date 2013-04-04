@@ -91,6 +91,7 @@ class Environment
     {
         $startTime = time();
         $direction = ($direction == MigrationInterface::UP) ? MigrationInterface::UP : MigrationInterface::DOWN;
+        $migration->setEnvironmentName($this->getName());
         $migration->setAdapter($this->getAdapter());
         
         // begin the transaction if the adapter supports it

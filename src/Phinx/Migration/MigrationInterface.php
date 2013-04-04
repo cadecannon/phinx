@@ -82,6 +82,21 @@ interface MigrationInterface
     public function getAdapter();
     
     /**
+     * Sets the current environment name.
+     *
+     * @param string $name
+     * @return MigrationInterface
+     */
+    public function setEnvironmentName($name);
+    
+    /**
+     * Gets the current environment name.
+     * 
+     * @return string
+     */
+    public function getEnvironmentName();
+    
+    /**
      * Gets the name.
      *
      * @return string
@@ -95,6 +110,7 @@ interface MigrationInterface
      * @return MigrationInterface
      */
     public function setVersion($version);
+    
     
     /**
      * Gets the migration version number.
