@@ -44,7 +44,7 @@ class Migrate extends AbstractCommand
          parent::configure();
          
          $this->addOption('--environment', '-e', InputArgument::OPTIONAL, 'The target environment');
-         $this->addOption('--verbose', '-v', InputOption::VALUE_NONE, 'Show more output');
+         //$this->addOption('--verbose', '-v', InputOption::VALUE_NONE, 'Show more output');
          
          $this->setName('migrate')
               ->setDescription('Migrate the database')
